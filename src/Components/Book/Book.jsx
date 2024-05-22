@@ -1,11 +1,12 @@
 import PropTypes from 'prop-types';
 import { CiStar } from "react-icons/ci";
+import { Link } from 'react-router-dom';
 
 const Book = ({ book }) => {
-      const { bookId, bookName, author, image, review, totalPages, rating, category, tags, publisher, yearOfPublishing } = book;
+      const { bookId, bookName, author, image, rating, category, tags } = book;
 
       return (
-            <div className="p-6 rounded-2xl border border-[#13131326]">
+            <Link to={`/bookDetails/${bookId}`} className="p-4 rounded-2xl border border-[#13131326]">
                   <figure className="bg-[#F3F3F3] py-10 px-10 rounded-2xl flex justify-center items-center mb-5">
                         <img src={image} alt="" />
                   </figure>
@@ -25,7 +26,7 @@ const Book = ({ book }) => {
                               </div>
                         </div>
                   </div>
-            </div>
+            </Link>
       );
 };
 

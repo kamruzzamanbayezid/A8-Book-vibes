@@ -1,5 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
 import CommonBtn from "../../Shared/CommonBtn";
+import CommonBtn2 from "../../Shared/CommonBtn2";
 
 const Navbar = () => {
 
@@ -8,7 +9,7 @@ const Navbar = () => {
                   <NavLink
                         to='/'
                         className={({ isActive }) =>
-                              isActive ? 'text-[#23BE0A] text-lg font-semibold px-4 py-2 border border-[#23BE0A] hover:bg-[#23BE0A] hover:text-black'
+                              isActive ? 'text-[#23BE0A] text-lg font-semibold px-4 py-2 border border-[#23BE0A] hover:bg-[#23BE0A] hover:text-white'
                                     :
                                     'text-[#131313cc] text-lg bg-transparent'}
                   >
@@ -19,7 +20,7 @@ const Navbar = () => {
                   <NavLink
                         to='/listedBook'
                         className={({ isActive }) =>
-                              isActive ? 'text-[#23BE0A] text-lg font-semibold px-4 py-2 border border-[#23BE0A] hover:bg-[#23BE0A] hover:text-black'
+                              isActive ? 'text-[#23BE0A] text-lg font-semibold px-4 py-2 border border-[#23BE0A] hover:bg-[#23BE0A] hover:text-white'
                                     :
                                     'text-[#131313cc] text-lg font-normal'}
                   >
@@ -30,7 +31,7 @@ const Navbar = () => {
                   <NavLink
                         to='/pageToRead'
                         className={({ isActive }) =>
-                              isActive ? 'text-[#23BE0A] text-lg font-semibold px-4 py-2 border border-[#23BE0A] hover:bg-[#23BE0A] hover:text-black'
+                              isActive ? 'text-[#23BE0A] text-lg font-semibold px-4 py-2 border border-[#23BE0A] hover:bg-[#23BE0A] hover:text-white'
                                     :
                                     'text-[#131313cc] text-lg font-normal'}
                   >
@@ -60,7 +61,7 @@ const Navbar = () => {
                   </div>
                   <div className="navbar-end">
                         <CommonBtn title='Sign In' />
-                        <button className="text-white hover:text-[#59C6D2] bg-[#59C6D2] hover:bg-transparent px-6 py-3 border border-[#59C6D2] font-semibold text-lg rounded-lg transition ml-3">Sign Up</button>
+                        <CommonBtn2 title='Sign Up'/>
                   </div>
             </div>
       );
