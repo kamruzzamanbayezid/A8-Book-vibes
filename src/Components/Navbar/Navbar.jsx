@@ -18,7 +18,7 @@ const Navbar = () => {
             </li>
             <li>
                   <NavLink
-                        to='/listedBook'
+                        to='/listedBooks'
                         className={({ isActive }) =>
                               isActive ? 'text-[#23BE0A] text-lg font-semibold px-4 py-2 border border-[#23BE0A] hover:bg-[#23BE0A] hover:text-white'
                                     :

@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
 import CommonBtn2 from "../../Shared/CommonBtn2";
+import { addBookToLocalStorage } from "../../Utils/localstorageForRead";
+import { addWishBookToLocalStorage } from "../../Utils/localStorageForWishList";
+
 
 const BookDetails = () => {
 
@@ -15,6 +18,14 @@ const BookDetails = () => {
       }, [books, id])
 
       const { bookId, bookName, author, image, review, totalPages, rating, category, tags, publisher, yearOfPublishing } = book;
+
+      const handleReadBook = () => {
+            addBookToLocalStorage(bookId)
+      }
+
+      const handleWishListBook = () => {
+            addWishBookToLocalStorage(bookId);
+      }
 
       return (
             <div className="flex flex-col lg:flex-row justify-between my-10">
@@ -52,9 +63,11 @@ const BookDetails = () => {
                                     <span className="text-[#131313] font-bold">{rating}</span>
                               </div>
                         </div>
-                        <div className="mt-8">
-                              <button className="hover:text-white text-[#59C6D2] hover:bg-[#59C6D2] bg-transparent px-6 py-3 border border-[#59C6D2] font-semibold text-lg rounded-lg transition mr-4">Read</button>
-                              <CommonBtn2 title='Wishlist' />
+                        <div className="mt-8 flex items-center gap-3">
+                              <button onClick={handleReadBook} className="hover:text-white text-[#59C6D2] hover:bg-[#59C6D2] bg-transparent px-6 py-3 border border-[#59C6D2] font-semibold text-lg rounded-lg transition mr-4">Read</button>
+                              <div onClick={handleWishListBook}>
+                                    <CommonBtn2 title='Wishlist' />
+                              </div>
                         </div>
                   </div>
             </div>
