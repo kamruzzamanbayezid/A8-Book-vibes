@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link, Outlet } from "react-router-dom";
 
 const ListedBook = () => {
 
@@ -17,15 +18,17 @@ const ListedBook = () => {
                               <option className="text-white">React</option>
                         </select>
                   </div>
-                  <div className="flex my-10 -mx-4 overflow-x-auto overflow-y-hidden flex-nowrap dark:bg-gray-100 dark:text-gray-800">
-                        <a onClick={() => setIndex(0)} rel="noopener noreferrer" href="#" className={`${index == 0 ? 'border border-b-0 rounded-t-lg' : 'border-b'} flex items-center flex-shrink-0 px-5 py-3 space-x-2 dark:border-gray-600 dark:text-gray-600`}>
+                  <div className="flex mt-10 mb-5 -mx-4 overflow-x-auto overflow-y-hidden flex-nowrap dark:bg-gray-100 dark:text-gray-800">
+                        <Link to='' onClick={() => setIndex(0)} className={`${index == 0 ? 'border border-b-0 rounded-t-lg' : 'border-b'} flex items-center flex-shrink-0 px-5 py-3 space-x-2 dark:border-gray-600 dark:text-gray-600`}>
                               <span>Read Books</span>
-                        </a>
+                        </Link>
                         
-                        <a onClick={() => setIndex(1)} rel="noopener noreferrer" href="#" className={`${index == 1 ? 'border border-b-0 rounded-t-lg' : 'border-b'} flex items-center flex-shrink-0 px-5 py-3 space-x-2 dark:border-gray-600 dark:text-gray-600`}>
+                        <Link to='wishList' onClick={() => setIndex(1)} className={`${index == 1 ? 'border border-b-0 rounded-t-lg' : 'border-b'} flex items-center flex-shrink-0 px-5 py-3 space-x-2 dark:border-gray-600 dark:text-gray-600`}>
                               <span>Wishlist Books</span>
-                        </a>
+                        </Link>
                   </div>
+
+                  <Outlet/>
             </div>
       );
 };
