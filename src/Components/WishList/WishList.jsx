@@ -24,7 +24,7 @@ const WishList = () => {
       return (
             <div>
                   {
-                        books?.map(book => <WishListBook key={book?.bookId} book={book}></WishListBook>)
+                        books?.map((book, idx) => <WishListBook key={idx} book={book}></WishListBook>)
                   }
             </div>
       );

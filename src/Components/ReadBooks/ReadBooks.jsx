@@ -9,16 +9,16 @@ const ReadBooks = () => {
       const loadedBooks = useLoaderData();
 
       useEffect(() => {
-            if (loadedBooks.length > 0) {
-                  const storedId = getBookFromLocalStorage();
 
-                  const newBooks = [];
-                  for (let id of storedId) {
-                        const isMatched = loadedBooks?.find(book => book?.bookId == parseInt(id));
-                        newBooks.push(isMatched)
-                  }
-                  setBooks(newBooks);
+            const storedId = getBookFromLocalStorage();
+
+            const newBooks = [];
+            for (let id of storedId) {
+                  const isMatched = loadedBooks?.find(book => book?.bookId == parseInt(id));
+                  newBooks.push(isMatched)
             }
+            setBooks(newBooks);
+
       }, [loadedBooks]);
 
       return (
