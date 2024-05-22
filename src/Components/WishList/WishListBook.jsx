@@ -2,12 +2,13 @@ import PropTypes from 'prop-types';
 import { SiTildapublishing } from "react-icons/si";
 import { GoPeople } from "react-icons/go";
 import { MdOutlineContactPage } from "react-icons/md";
+import { Link } from 'react-router-dom';
 
 
 const WishListBook = ({ book }) => {
 
 
-      const { bookName, author, image, totalPages, rating, category, tags, publisher, yearOfPublishing } = book;
+      const { bookId, bookName, author, image, totalPages, rating, category, tags, publisher, yearOfPublishing } = book;
 
       return (
             <div className="flex flex-col lg:flex-row justify-between my-10 border p-4 rounded-2xl">
@@ -42,7 +43,7 @@ const WishListBook = ({ book }) => {
                         <div className='flex flex-wrap items-center gap-2.5'>
                               <span className="text-[#328EFF] text-base font-normal bg-[#328eff26] px-5 py-2 rounded-full">Category: {category}</span>
                               <span className="text-[#FFAC33] text-base font-normal bg-[#ffac3326] px-5 py-2 rounded-full">Rating: {rating}</span>
-                              <span className="text-[#FFF] text-base font-normal bg-[#23BE0A] px-5 py-2 rounded-full">View Details</span>
+                              <Link to={`/bookDetails/${bookId}`} className="text-[#FFF] text-base font-normal bg-[#23BE0A] px-5 py-2 rounded-full">View Details</Link>
 
                         </div>
 
