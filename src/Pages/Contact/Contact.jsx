@@ -1,7 +1,7 @@
 
 const Contact = () => {
       return (
-            <div className="dark:bg-gray-100 dark:text-gray-900">
+            <div className="dark:bg-gray-100 dark:text-gray-900 mb-20">
 
                   <div className=" flex flex-col lg:flex-row gap-6 lg:gap-0 items-center text-center lg:text-start my-10">
                         <div className="lg:w-[60%]">
@@ -14,17 +14,17 @@ const Contact = () => {
                   </div>
 
 
-                  <section className="py-10 dark:bg-gray-100 bg-[#1313130d] dark:text-gray-900">
+                  <section className="py-10 dark:bg-gray-100 bg-[#1313130d] dark:text-gray-900 rounded-2xl">
                         <div className="grid grid-cols-1 px-6  lg:px-8 md:grid-cols-2 ">
                               <div className="py-6 md:py-0 md:px-6">
-                              <h1 className="font-playfair text-5xl font-bold mb-5">Get In Touch</h1>
+                                    <h1 className="font-playfair text-5xl font-bold mb-5">Get In Touch</h1>
                                     <p className="text-[#131313b3] font-normal text-lg pt-2 pb-4">Fill in the form to start a conversation</p>
                                     <div className="space-y-4">
                                           <p className="flex items-center">
                                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="green" className="w-5 h-5 mr-2 sm:mr-6">
                                                       <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd"></path>
                                                 </svg>
-                                                <span className="text-[#131313b3] font-normal text-base">Matlab North,<br/> Chandpur 3640</span>
+                                                <span className="text-[#131313b3] font-normal text-base">Matlab North,<br /> Chandpur 3640</span>
                                           </p>
                                           <p className="flex items-center">
                                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="green" className="w-5 h-5 mr-2 sm:mr-6">
