@@ -38,6 +38,17 @@ const Navbar = () => {
                         Pages to Read
                   </NavLink>
             </li>
+            <li>
+                  <NavLink
+                        to='/about'
+                        className={({ isActive }) =>
+                              isActive ? 'text-[#23BE0A] text-lg font-semibold px-4 py-2 border border-[#23BE0A] hover:bg-[#23BE0A] hover:text-white'
+                                    :
+                                    'text-[#131313cc] text-lg font-normal'}
+                  >
+                        About
+                  </NavLink>
+            </li>
 
       </>
 
