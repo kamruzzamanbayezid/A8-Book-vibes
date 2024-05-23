@@ -31,7 +31,7 @@ const BookDetails = () => {
             <div className="flex flex-col lg:flex-row justify-between my-10">
                   {/* book image */}
                   <div className="lg:w-[49%] flex items-center justify-center bg-[#F3F3F3] rounded-2xl py-10 lg:py-0 mb-6 lg:mb-0">
-                        <img src={image} alt="" />
+                        <img className="lg:h-[500px]" src={image} alt="" />
                   </div>
 
                   {/* book content */}

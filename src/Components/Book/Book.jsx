@@ -8,7 +8,7 @@ const Book = ({ book }) => {
       return (
             <Link to={`/bookDetails/${bookId}`} className="p-4 rounded-2xl border border-[#13131326]">
                   <figure className="bg-[#F3F3F3] py-10 px-10 rounded-2xl flex justify-center items-center mb-5">
-                        <img src={image} alt="" />
+                        <img className='h-[200px]' src={image} alt="" />
                   </figure>
                   <div>
                         <div className="flex gap-3">

@@ -1,12 +1,15 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import WishListBook from "./WishListBook";
 import { getWishBookFromLocalStorage } from "../../Utils/localStorageForWishList";
+import { SortingContext } from "../SortingProvider/SortingProvider";
 
 const WishList = () => {
 
       const [books, setBooks] = useState([]);
+      const [sortedBooks, setSortedBooks] = useState([]);
       const loadedBooks = useLoaderData();
+      const { sortingCriteria } = useContext(SortingContext);
 
       useEffect(() => {
             if (loadedBooks.length > 0) {
@@ -21,10 +24,25 @@ const WishList = () => {
             }
       }, [loadedBooks]);
 
+      useEffect(() => {
+
+            let sorted = [...books];
+            if (sortingCriteria === 'rating') {
+                  sorted.sort((a, b) => b.rating - a.rating);
+            } else if (sortingCriteria === 'totalPages') {
+                  sorted.sort((a, b) => b.totalPages - a.totalPages);
+            } else if (sortingCriteria === 'yearOfPublishing') {
+                  sorted.sort((a, b) => b.yearOfPublishing - a.yearOfPublishing);
+            }
+            setSortedBooks(sorted);
+
+      }, [sortingCriteria, books]);
+
       return (
             <div>
                   {
-                        books?.map((book, idx) => <WishListBook key={idx} book={book}></WishListBook>)
+
+                        sortedBooks?.map((book, idx) => <WishListBook key={idx} book={book}></WishListBook>)
                   }
             </div>
       );

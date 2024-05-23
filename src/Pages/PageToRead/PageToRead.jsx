@@ -26,7 +26,7 @@ const PageToRead = () => {
       const colors = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', 'red', 'pink'];
 
       return (
-            <div className="lg:px-20 pr-7 lg:py-16 py-10 w-full h-[700px] bg-[#13131308] flex justify-center rounded-2xl mb-20">
+            <div className="lg:px-20 pr-7 lg:py-16 py-10 w-full h-[700px]  bg-[#13131308] flex justify-center rounded-2xl mb-20">
                   <ResponsiveContainer width="100%" height="100%">
                         <BarChart data={books} >
                               <CartesianGrid strokeDasharray="3 3" />
