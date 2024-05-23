@@ -11,7 +11,7 @@ const getWishBookFromLocalStorage = () => {
 
 const saveWishBookToLocalStorage = (id) => {
       localStorage.setItem('wishBook', JSON.stringify(id));
-      toast.success('You successfully added the book!!')
+      toast.success('You successfully added book in the wishlist!!')
 }
 
 const addWishBookToLocalStorage = (id) => {
@@ -23,7 +23,7 @@ const addWishBookToLocalStorage = (id) => {
       const isReadExist = storedReadBook?.find(book => book == id);
 
       if (isExist || isReadExist) {
-            return toast.error('This book is already in the list!!')
+            return toast.error('You already read this book!!')
       }
       storedBook.push(id);
 
